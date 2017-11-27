@@ -1,46 +1,38 @@
-/*
- * The client then will start up and create a socket based 
- * on the information provided by the server.
- */
-package localchat;
+package javaapplication21;
+
 
 import java.net.*;
 import java.io.*;
-import java.util.Scanner;
 
-/**
- * @author Antoinette Addo
- * @version 2017.10.12
- */
 
 public class Client {
 	
     public static void main(String[] args) throws Exception{
 		
-		system.out.println("****Client****")
+		System.out.println("****Client****");
 		
 		try{
 			//opens a socket
-			Socket cs = new Socket("127.0.0.1", 4380);
+			Socket cs = new Socket("127.0.0.1",5354 );
 			
 			//Open input and output stream
-			DataOutputStream ods = new DataOutputStream(cs.getOutputStream());
-			DataInputStream  ids = new DataInputStream(cs.getInputStream());
-			
+			OutputStream out = cs.getOutputStream();
+			InputStream  in = cs.getInputStream();
+			    
 			//read and write to stream
 			
-			byte[] b = new byte[50];
-			String s = b.readLine();
-			BufferedReader br = new BufferedReader(new FileReader(" ");
-			ods.writeUTF(s);	//write to stream
+			byte[] b = new byte[5000];
+                                  
+			BufferedReader br = new BufferedReader(new FileReader("D:\\newfile.txt "));
+			in.read(b,0,b.length);	
+				//write to stream
 			cs.close();
 			System.out.println("The file has been transfered!");
 			
 			}catch(Exception er){
-				er.printStackTrace();
 			}
 		}
-		
+}
 	
 		
 		
