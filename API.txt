@@ -1,0 +1,12 @@
+
+Client/Server API 
+Classes: 
+ Server – use server Socket
+• Client -uses socket
+
+Constructor: 
+• Client- establish connection with server to read the text file and store in new text file document
+• Server- listen to port number from client and access connection to send files
+
+Methods: 
+• Void main – initiates run to get message and send deliverables and handles exception 
